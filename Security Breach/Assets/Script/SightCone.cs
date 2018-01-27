@@ -25,11 +25,10 @@ public class SightCone : MonoBehaviour
     public bool tempCrouch;
     public bool hunting;
 
-    Color searchingColor = Color.yellow;
-    Color caughtColor = Color.red;
+    Color searchingColor = new Vector4(255,255,0,69).normalized;
+    Color caughtColor = new Vector4(255,0,0,69).normalized;
 
     public float meshResolution;
-    public int edgeResolveIterations;
     public MeshFilter viewMeshFilter;
     Mesh viewMesh;
     MeshRenderer[] viewRender;
@@ -61,11 +60,11 @@ public class SightCone : MonoBehaviour
 
         if (visibleTargets.Count > 0)
         {
-            viewRender[1].material.color = Color.red;
+            viewRender[1].material.color = caughtColor;
         }
         else
         {
-            viewRender[1].material.color = Color.yellow;
+            viewRender[1].material.color = searchingColor;
         }
 
         DrawFieldOfView();
@@ -97,7 +96,7 @@ public class SightCone : MonoBehaviour
             Vector3 dirToTarget = (target.position - transform.position).normalized;
 
             //If there within the view arc
-            if (Vector3.Angle(transform.forward, dirToTarget) < viewAngle * 0.5)
+            if (Vector3.Angle(transform.up, dirToTarget) < viewAngle * 0.5)
             {
                 //Find distance to the target
                 float dstToTarget = Vector3.Distance(transform.position, target.position);
