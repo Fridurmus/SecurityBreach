@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         controller = GetComponent<CharacterController>();
-        //playerRenderer = GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -95,5 +94,15 @@ public class PlayerController : MonoBehaviour {
         {
             isInteracting = false;
         }
+
+        if (Input.GetButtonDown("pause"))
+        {
+            Time.timeScale = 0;
+        }
+        if (Time.timeScale == 0 && Input.GetButtonDown("pause"))
+        {
+            Time.timeScale = 1;
+        }
+        
     }
 }
