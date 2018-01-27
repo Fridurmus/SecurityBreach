@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour {
         {
             speed = 12.0f;
         }
-        if (sneaking)
+        else if (sneaking)
         {
             speed = 3.0f;
         }
