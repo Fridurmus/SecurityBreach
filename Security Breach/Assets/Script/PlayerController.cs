@@ -18,6 +18,10 @@ public class PlayerController : MonoBehaviour {
     private Quaternion downDirection = Quaternion.Euler(0, 0, 180);
 
     public bool isInteracting = false;
+    public GameObject hackBulletPrefab;
+    public Transform hackBulletSpawn;
+
+    
 
     // Use this for initialization
     void Start () {
@@ -86,6 +90,7 @@ public class PlayerController : MonoBehaviour {
         }
         
 
+        //begin setting up non-movement input
         if (Input.GetButton("use"))
         {
             isInteracting = true;
@@ -95,6 +100,7 @@ public class PlayerController : MonoBehaviour {
             isInteracting = false;
         }
 
+        //use timescale for pause
         if (Input.GetButtonDown("pause"))
         {
             Time.timeScale = 0;
@@ -104,5 +110,15 @@ public class PlayerController : MonoBehaviour {
             Time.timeScale = 1;
         }
         
+        if (Input.GetButtonDown("shoot"))
+        {
+            var hackBullet = (GameObject)Instantiate(
+            hackBulletPrefab,
+            hackBulletSpawn.position,
+            hackBulletSpawn.rotation
+        );
+            hackBullet.GetComponent<Rigidbody>().velocity = hackBulletSpawn.transform.up * 6;
+            
+        }
     }
 }
