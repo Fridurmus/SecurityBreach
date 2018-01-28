@@ -14,11 +14,13 @@ public class PlayerController : MonoBehaviour {
 
     private Vector3 moveDirection = Vector3.zero;
     public CharacterController controller;
-    public SpriteRenderer playerRenderer;
-    private Quaternion rightDirection = Quaternion.Euler(0, 0, 90);
-    private Quaternion leftDirection = Quaternion.Euler(0, 0, 270);
-    private Quaternion upDirection = Quaternion.Euler(0, 0, 0);
-    private Quaternion downDirection = Quaternion.Euler(0, 0, 180);
+    //private Quaternion rightDirection = Quaternion.Euler(0, 0, 90);
+    //private Quaternion leftDirection = Quaternion.Euler(0, 0, 270);
+    //private Quaternion upDirection = Quaternion.Euler(0, 0, 0);
+    //private Quaternion downDirection = Quaternion.Euler(0, 0, 180);
+    public Animator spriteAnimator;
+
+
 
     public bool isInteracting = false;
     public GameObject hackBulletPrefab;
@@ -30,6 +32,7 @@ public class PlayerController : MonoBehaviour {
     void Start () {
         controller = GetComponent<CharacterController>();
         originalY = transform.position.y;
+        spriteAnimator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -38,21 +41,25 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetButton("sprint") && Input.GetAxis("Horizontal") != 0 || Input.GetButton("sprint") && Input.GetAxis("Vertical") != 0)
         {
             sprinting = true;
+            spriteAnimator.SetBool("isSprinting", true);
         }
 
         else
         {
             sprinting = false;
+            spriteAnimator.SetBool("isSprinting", false);
         }
 
         //check for sneaking
         if (Input.GetButton("sneak"))
         {
             sneaking = true;
+            spriteAnimator.SetBool("isCrouching", true);
         }
         else
         {
             sneaking = false;
+            spriteAnimator.SetBool("isCrouching", false);
         }
 
         //set the direction
@@ -68,6 +75,15 @@ public class PlayerController : MonoBehaviour {
         {
             speed = 6.0f;
         }
+
+        if ((Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Horizontal") < -0.1f) || (Input.GetAxis("Vertical") > 0.1f || Input.GetAxis("Vertical") < -0.1f))
+        {
+            spriteAnimator.SetBool("isMoving", true);
+        }
+        else
+        {
+            spriteAnimator.SetBool("isMoving", false);
+        }
         moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
         //do the movement
@@ -75,27 +91,28 @@ public class PlayerController : MonoBehaviour {
 
 
         //do rotation checks.
-        if (Input.GetAxisRaw("Horizontal") > 0 && transform.rotation.eulerAngles.z != 90)
-        {
-            transform.rotation = rightDirection;
-        }
-        if (Input.GetAxisRaw("Horizontal") < 0 && transform.rotation.eulerAngles.z != 270)
-        {
-            transform.rotation = leftDirection;
-        }
-        if (Input.GetAxisRaw("Vertical") > 0 && transform.rotation.eulerAngles.z != 0)
-        {
-            transform.rotation = upDirection;
-        }
-        if (Input.GetAxisRaw("Vertical") < 0 && transform.rotation.eulerAngles.z != 180)
-        {
-            transform.rotation = downDirection;
-        }
+        //if (Input.GetAxisRaw("Horizontal") > 0 && transform.rotation.eulerAngles.z != 90)
+        //{
+        //    transform.rotation = rightDirection;
+        //}
+        //if (Input.GetAxisRaw("Horizontal") < 0 && transform.rotation.eulerAngles.z != 270)
+        //{
+        //    transform.rotation = leftDirection;
+        //}
+        //if (Input.GetAxisRaw("Vertical") > 0 && transform.rotation.eulerAngles.z != 0)
+        //{
+        //    transform.rotation = upDirection;
+        //}
+        //if (Input.GetAxisRaw("Vertical") < 0 && transform.rotation.eulerAngles.z != 180)
+        //{
+        //    transform.rotation = downDirection;
+        //}
 
         //begin setting up non-movement input
-        if (Input.GetButton("use"))
+        if (Input.GetButtonDown("use"))
         {
             isInteracting = true;
+            spriteAnimator.SetTrigger("didInteract");
         }
         else
         {
@@ -118,16 +135,16 @@ public class PlayerController : MonoBehaviour {
         {
             transform.position = new Vector3(transform.position.x, originalY, transform.position.z);
         }
-        if (Input.GetButtonDown("shoot"))
-        {
-            var hackBullet = (GameObject)Instantiate(
-            hackBulletPrefab,
-            hackBulletSpawn.position,
-            hackBulletSpawn.rotation
-        );
-            hackBullet.GetComponent<Rigidbody>().velocity = hackBulletSpawn.transform.up * 6;
+        //if (Input.GetButtonDown("shoot"))
+        //{
+        //    var hackBullet = (GameObject)Instantiate(
+        //    hackBulletPrefab,
+        //    hackBulletSpawn.position,
+        //    hackBulletSpawn.rotation
+        //);
+        //    hackBullet.GetComponent<Rigidbody>().velocity = hackBulletSpawn.transform.up * 6;
             
-        }
+        //}
     }
     private void OnTriggerEnter(Collider other)
     {
