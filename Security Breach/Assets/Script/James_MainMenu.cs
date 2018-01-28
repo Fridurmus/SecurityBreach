@@ -30,7 +30,7 @@ public class James_MainMenu : MonoBehaviour {
 	public void PlayGame()
 	{
         Debug.Log("SELECT LEVEL");
-        SceneManager.LoadScene("Level Select");
+        SceneManager.LoadScene("NewLevelSelect");
     }
 	public void Options()
 	{
