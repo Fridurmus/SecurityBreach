@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     public bool sprinting = false;
     public bool isPaused = false;
     public GameObject pauseScreen;
+    public GameObject exitTrig;
     float originalY;
 
     private Vector3 moveDirection = Vector3.zero;
@@ -126,6 +127,13 @@ public class PlayerController : MonoBehaviour {
         );
             hackBullet.GetComponent<Rigidbody>().velocity = hackBulletSpawn.transform.up * 6;
             
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "upload" && Input.GetButtonDown("use"))
+        {
+            exitTrig.SetActive(true);
         }
     }
 }
