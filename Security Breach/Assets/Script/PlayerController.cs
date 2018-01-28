@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour {
     public float speed = 6.0f;
     public bool sneaking = false;
     public bool sprinting = false;
+    public bool isPaused = false;
+    public GameObject pauseScreen;
     float originalY;
 
     private Vector3 moveDirection = Vector3.zero;
@@ -103,8 +105,10 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetButtonDown("pause"))
         {
             Time.timeScale = 0;
+            isPaused = true;
+            pauseScreen.SetActive(true);
         }
-        if (Time.timeScale == 0 && Input.GetButtonDown("pause"))
+        if (isPaused == true && Input.GetButtonDown("pause"))
         {
             Time.timeScale = 1;
         }
