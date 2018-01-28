@@ -10,10 +10,12 @@ public class Terminal : MonoBehaviour
     public bool triggerable = false;
     public bool triggered = false;
     Light ourLight;
+    AudioSource myAudio;
 
     private void Start()
     {
         ourLight = gameObject.GetComponentInChildren<Light>();
+        myAudio = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -22,6 +24,7 @@ public class Terminal : MonoBehaviour
         {
             ourLight.color = Color.blue;
             //play sound effect
+            myAudio.PlayOneShot(myAudio.clip);
             triggerable = true;
         }
     }
@@ -43,6 +46,7 @@ public class Terminal : MonoBehaviour
         {
             triggered = true;
             //play sound effect
+            myAudio.PlayOneShot(myAudio.clip);
         }
 
         if (triggered)
