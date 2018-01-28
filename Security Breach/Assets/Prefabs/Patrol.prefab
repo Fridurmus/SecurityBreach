@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 212288467011158140}
   - component: {fileID: 95743847172862224}
   - component: {fileID: 82103458652518680}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,8 +115,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1804031682096674}
-  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0.00000028088027}
-  m_LocalPosition: {x: -0.04, y: 0.57, z: 1.46}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.08, y: 1, z: -48.09}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 4886364913888768}
@@ -124,7 +124,7 @@ Transform:
   - {fileID: 4636731458741676}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -179.99998, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &4979364005014352
 Transform:
   m_ObjectHideFlags: 1
@@ -538,7 +538,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.16000007
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
