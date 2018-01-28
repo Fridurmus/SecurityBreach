@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class VolumeScript : MonoBehaviour {
 
+    public Slider volSlider;
 
 	// Use this for initialization
 	void Start () {
@@ -15,4 +16,9 @@ public class VolumeScript : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void ValueChangeCheck()
+    {
+        Debug.Log(volSlider.value);
+    }
 }
