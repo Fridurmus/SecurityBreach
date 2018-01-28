@@ -37,7 +37,7 @@ public class James_MainMenu : MonoBehaviour {
 	public void ShowControls()
 	{
 		Debug.Log ("Options are shown");
-		SceneManager.LoadScene ("Options");
+		SceneManager.LoadScene ("Options_Menu");
 	}
 	public void QuitGame()
 	{
