@@ -1314,13 +1314,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1490254735}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e0e3c90a54f20441ad7e88bc33b3627, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ee75f9f92b21ca48b105b54db0fce35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level1: {fileID: 1647552935}
-  level2: {fileID: 907457013}
-  level3: {fileID: 330101664}
-  level4: {fileID: 1231693050}
+  backButton: {fileID: 1362736424}
 --- !u!114 &1490254741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1329,10 +1326,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1490254735}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a30f7728422c59c48b837a2da2dff724, type: 3}
+  m_Script: {fileID: 11500000, guid: 9eecdf55cbe567847a9bff0e374851a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backButton: {fileID: 1362736424}
+  level1: {fileID: 1647552935}
+  level2: {fileID: 907457013}
+  level3: {fileID: 330101664}
+  level4: {fileID: 1231693050}
 --- !u!1 &1647552933
 GameObject:
   m_ObjectHideFlags: 0
