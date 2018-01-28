@@ -90,6 +90,7 @@ public class SightCone : MonoBehaviour
                 hunting = true;
                 sounds[0].PlayOneShot(sounds[0].clip);
                 sounds[1].Play();
+                sounds[2].Play();
                 Player.GameOver = true;
                 gameOver.gameOver();
             }
