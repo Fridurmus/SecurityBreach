@@ -3195,8 +3195,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 727730724}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.626, y: 1.45, z: 43.32582}
-  m_LocalScale: {x: 4.7543736, y: 2, z: 1}
+  m_LocalPosition: {x: -3.67, y: 1.45, z: 47.82}
+  m_LocalScale: {x: 4, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -3983,10 +3983,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e381f7d90a024054db005fd023b68248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GOverPanel: {fileID: 1791716873}
-  textBox: {fileID: 1545444831}
-  delay: 0.1
-  fullText: 'You''ve Been Spotted '
 --- !u!1 &1128496906
 GameObject:
   m_ObjectHideFlags: 0

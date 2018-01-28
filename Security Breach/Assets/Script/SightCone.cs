@@ -35,6 +35,8 @@ public class SightCone : MonoBehaviour
     Mesh viewMesh;
     MeshRenderer[] viewRender;
 
+    public AudioSource[] sounds;
+
     [HideInInspector]
     public float viewAngle;
     [HideInInspector]
@@ -52,6 +54,7 @@ public class SightCone : MonoBehaviour
         viewRender = GetComponentsInChildren<MeshRenderer>();
         huntTimer = timeToStopLooking;
         StartCoroutine("FindTargetsWithDelay", .2f);
+        sounds = GetComponentsInChildren<AudioSource>();
     }
 
     private void LateUpdate()
@@ -82,6 +85,8 @@ public class SightCone : MonoBehaviour
                 viewAngle = maxViewAngle + 40;
                 myLight.spotAngle = maxViewAngle + 40;
                 hunting = true;
+                sounds[0].PlayOneShot(sounds[0].clip);
+                sounds[1].Play();
             }
             else
             {
