@@ -20,5 +20,6 @@ public class VolumeScript : MonoBehaviour {
     public void ValueChangeCheck()
     {
         Debug.Log(volSlider.value);
+        AudioListener.volume = volSlider.value;
     }
 }
