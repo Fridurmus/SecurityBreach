@@ -67,8 +67,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1804031682096674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.04, y: -0.68, z: -4.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -3.9406807, y: 1.35, z: -6.681343}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4886364913888768}
   m_Father: {fileID: 0}
@@ -170,6 +170,7 @@ MonoBehaviour:
   viewRadius: 3.11
   maxViewAngle: 140
   minViewAngle: 49
+  timeToStopLooking: 0.1
   Type: 0
   TargetMask:
     serializedVersion: 2
@@ -179,10 +180,11 @@ MonoBehaviour:
     m_Bits: 512
   tempCrouch: 0
   hunting: 0
-  meshResolution: 6
+  meshResolution: 4
   viewMeshFilter: {fileID: 33191849977040622}
   viewAngle: 0
   visibleTargets: []
+  Player: {fileID: 0}
 --- !u!135 &135604351706890460
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public float speed = 6.0f;
-    public float gravity = 20.0f;
     public bool sneaking = false;
     public bool sprinting = false;
+    float originalY;
 
     private Vector3 moveDirection = Vector3.zero;
     public CharacterController controller;
@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         controller = GetComponent<CharacterController>();
+        originalY = transform.position.y;
 	}
 	
 	// Update is called once per frame
@@ -60,11 +61,10 @@ public class PlayerController : MonoBehaviour {
         {
             speed = 6.0f;
         }
-        moveDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
-        moveDirection *= speed;
+        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
         //do the movement
-        controller.Move(moveDirection * Time.deltaTime);
+        controller.Move(moveDirection * speed * Time.deltaTime);
 
 
         //do rotation checks.
@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour {
         {
             transform.rotation = downDirection;
         }
-        
+
 
         if (Input.GetButton("use"))
         {
@@ -103,6 +103,10 @@ public class PlayerController : MonoBehaviour {
         {
             Time.timeScale = 1;
         }
-        
+
+        if (transform.position.y != originalY)
+        {
+            transform.position = new Vector3(transform.position.x, originalY, transform.position.z);
+        }
     }
 }

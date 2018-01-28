@@ -11,6 +11,9 @@ public class SightCone : MonoBehaviour
     public float maxViewAngle;
     [Range(0, 360)]
     public float minViewAngle;
+
+    public float timeToStopLooking;
+    float huntTimer;
     public enum PatrolType
     {
         Patrol,
@@ -25,8 +28,8 @@ public class SightCone : MonoBehaviour
     public bool tempCrouch;
     public bool hunting;
 
-    Color searchingColor = new Vector4(255,255,0,69).normalized;
-    Color caughtColor = new Vector4(255,0,0,69).normalized;
+    Color searchingColor = new Vector4(255, 255, 0, 69).normalized;
+    Color caughtColor = new Vector4(255, 0, 0, 69).normalized;
 
     public float meshResolution;
     public MeshFilter viewMeshFilter;
@@ -37,34 +40,55 @@ public class SightCone : MonoBehaviour
     public float viewAngle;
     [HideInInspector]
     public List<Transform> visibleTargets;
+    [HideInInspector]
+    public PlayerController Player;
 
     private void Start()
     {
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
         viewRender = GetComponentsInChildren<MeshRenderer>();
+        huntTimer = timeToStopLooking;
         StartCoroutine("FindTargetsWithDelay", .2f);
     }
 
     private void LateUpdate()
     {
-        if (!tempCrouch)
+        if (!hunting)
         {
-            viewAngle = maxViewAngle;
-        }
-        else
-        {
-            viewAngle = minViewAngle;
-        }
+            if (Player.sneaking)
+            {
+                viewAngle = minViewAngle;
+            }
+            else
+            {
+                viewAngle = maxViewAngle;
+            }
 
-        if (visibleTargets.Count > 0)
-        {
-            viewRender[1].material.color = caughtColor;
+            if (Player.sprinting)
+            {
+                viewAngle = maxViewAngle + 40;
+            }
+
+            if (visibleTargets.Count > 0)
+            {
+                viewRender[1].material.color = caughtColor;
+                viewAngle = maxViewAngle + 40;
+                hunting = true;
+            }
+            else
+            {
+                viewRender[1].material.color = searchingColor;
+            }
         }
         else
         {
-            viewRender[1].material.color = searchingColor;
+            if (visibleTargets.Count < 1)
+            {
+                Escaping();
+            }
         }
 
         DrawFieldOfView();
@@ -96,7 +120,7 @@ public class SightCone : MonoBehaviour
             Vector3 dirToTarget = (target.position - transform.position).normalized;
 
             //If there within the view arc
-            if (Vector3.Angle(transform.up, dirToTarget) < viewAngle * 0.5)
+            if (Vector3.Angle(transform.forward, dirToTarget) < viewAngle * 0.5)
             {
                 //Find distance to the target
                 float dstToTarget = Vector3.Distance(transform.position, target.position);
@@ -116,7 +140,7 @@ public class SightCone : MonoBehaviour
         {
             angleInDegrees += transform.eulerAngles.y;
         }
-        return new Vector3(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), Mathf.Cos(angleInDegrees * Mathf.Deg2Rad), 0);
+        return new Vector3(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), 0, Mathf.Cos(angleInDegrees * Mathf.Deg2Rad));
     }
 
     void DrawFieldOfView()
@@ -185,6 +209,19 @@ public class SightCone : MonoBehaviour
             point = _point;
             dist = _dist;
             angle = _angle;
+        }
+    }
+
+    public void Escaping()
+    {
+        if (huntTimer >= 0)
+        {
+            huntTimer -= Time.deltaTime;
+        }
+        else
+        {
+            hunting = false;
+            huntTimer = timeToStopLooking;
         }
     }
 }
