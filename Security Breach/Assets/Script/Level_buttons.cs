@@ -28,22 +28,22 @@ public class Level_buttons : MonoBehaviour {
 	public void LevelOne()
 	{
 		Debug.Log ("ONE GO");
-		SceneManager.LoadScene ("level 1");
+		SceneManager.LoadScene ("JP_Level1");
 	}
 	public void LevelTwo()
 	{
 		Debug.Log ("TWO GO");
-		SceneManager.LoadScene ("level 2");
+		SceneManager.LoadScene ("JP_Level2");
 	}
 	public void LevelThree()
 	{
 		Debug.Log ("THREE GO");
-		SceneManager.LoadScene ("level 3");
+		SceneManager.LoadScene ("level 1");
 	}
 	public void LevelFour()
 	{
 		Debug.Log ("FOUR GO");
-		SceneManager.LoadScene ("level 4");
+		SceneManager.LoadScene ("level 2");
 	}
 	
 	// Update is called once per frame
