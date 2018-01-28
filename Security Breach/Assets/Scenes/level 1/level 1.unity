@@ -378,6 +378,19 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 114165440310867758, guid: 9a2969959ee72804495f3aa2986448c6,
+        type: 2}
+      propertyPath: spriteAnimator
+      value: 
+      objectReference: {fileID: 1866794256}
+    - target: {fileID: 4890552254098038, guid: 9a2969959ee72804495f3aa2986448c6, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4890552254098038, guid: 9a2969959ee72804495f3aa2986448c6, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a2969959ee72804495f3aa2986448c6, type: 2}
   m_IsPrefabParent: 0
@@ -4833,6 +4846,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1864841729}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &1866794256 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95208811097695756, guid: 9a2969959ee72804495f3aa2986448c6,
+    type: 2}
+  m_PrefabInternal: {fileID: 224958289}
 --- !u!1 &1966003279
 GameObject:
   m_ObjectHideFlags: 0

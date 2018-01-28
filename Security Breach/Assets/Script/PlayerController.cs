@@ -14,10 +14,10 @@ public class PlayerController : MonoBehaviour {
 
     private Vector3 moveDirection = Vector3.zero;
     public CharacterController controller;
-    private Quaternion rightDirection = Quaternion.Euler(0, 0, 90);
-    private Quaternion leftDirection = Quaternion.Euler(0, 0, 270);
-    private Quaternion upDirection = Quaternion.Euler(0, 0, 0);
-    private Quaternion downDirection = Quaternion.Euler(0, 0, 180);
+    private Quaternion rightDirection = Quaternion.Euler(90, 90, 0);
+    private Quaternion leftDirection = Quaternion.Euler(90, 270, 0);
+    private Quaternion upDirection = Quaternion.Euler(90, 0, 0);
+    private Quaternion downDirection = Quaternion.Euler(90, 180, 0);
     public Animator spriteAnimator;
 
 
@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour {
         {
             transform.rotation = leftDirection;
         }
-        if (Input.GetAxisRaw("Vertical") > 0 && transform.rotation.eulerAngles.z != 0)
+        if (Input.GetAxisRaw("Vertical") > 0 && transform.rotation.eulerAngles.z != 360)
         {
             transform.rotation = upDirection;
         }
