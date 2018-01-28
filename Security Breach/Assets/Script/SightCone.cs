@@ -28,6 +28,7 @@ public class SightCone : MonoBehaviour
     public bool tempCrouch;
     public bool hunting;
 
+    Light myLight;
     Color searchingColor = new Vector4(255, 255, 0, 69).normalized;
     Color caughtColor = new Vector4(255, 0, 0, 69).normalized;
 
@@ -46,6 +47,7 @@ public class SightCone : MonoBehaviour
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        myLight = GetComponentInChildren<Light>();
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
@@ -58,29 +60,36 @@ public class SightCone : MonoBehaviour
     {
         if (!hunting)
         {
-            if (Player.sneaking)
+            if (!Player.sneaking)
             {
-                viewAngle = minViewAngle;
+                viewAngle = maxViewAngle;
+                myLight.spotAngle = maxViewAngle;
             }
             else
             {
-                viewAngle = maxViewAngle;
+                viewAngle = minViewAngle;
+                myLight.spotAngle = minViewAngle;
             }
 
             if (Player.sprinting)
             {
                 viewAngle = maxViewAngle + 40;
+                myLight.spotAngle = maxViewAngle;
             }
 
             if (visibleTargets.Count > 0)
             {
                 viewRender[1].material.color = caughtColor;
+                myLight.color = caughtColor;
                 viewAngle = maxViewAngle + 40;
+                myLight.spotAngle = maxViewAngle + 40;
                 hunting = true;
             }
             else
             {
                 viewRender[1].material.color = searchingColor;
+                myLight.color = searchingColor;
+                myLight.spotAngle = maxViewAngle;
             }
         }
         else
