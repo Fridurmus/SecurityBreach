@@ -29,8 +29,6 @@ public class SightCone : MonoBehaviour
     public bool hunting;
 
     Light myLight;
-    Color searchingColor = new Vector4(255, 255, 0, 69).normalized;
-    Color caughtColor = new Vector4(255, 0, 0, 69).normalized;
 
     public float meshResolution;
     public MeshFilter viewMeshFilter;
@@ -79,16 +77,16 @@ public class SightCone : MonoBehaviour
 
             if (visibleTargets.Count > 0)
             {
-                viewRender[1].material.color = caughtColor;
-                myLight.color = caughtColor;
+                viewRender[0].material.color = Color.red;
+                myLight.color = Color.red;
                 viewAngle = maxViewAngle + 40;
                 myLight.spotAngle = maxViewAngle + 40;
                 hunting = true;
             }
             else
             {
-                viewRender[1].material.color = searchingColor;
-                myLight.color = searchingColor;
+                viewRender[0].material.color = Color.yellow;
+                myLight.color = Color.yellow;
                 myLight.spotAngle = maxViewAngle;
             }
         }

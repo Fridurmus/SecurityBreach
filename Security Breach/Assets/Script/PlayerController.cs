@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour {
         //set the direction
 		if (sprinting && !sneaking)
         {
-            speed = 12.0f;
+            speed = 8.0f;
         }
         else if (sneaking)
         {
@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour {
         }
         else
         {
-            speed = 6.0f;
+            speed = 4.0f;
         }
 
         if ((Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Horizontal") < -0.1f) || (Input.GetAxis("Vertical") > 0.1f || Input.GetAxis("Vertical") < -0.1f))
