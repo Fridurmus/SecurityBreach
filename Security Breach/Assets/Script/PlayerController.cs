@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //check for sprinting
-        if (Input.GetButton("sprint"))
+        if (Input.GetButton("sprint") && Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
             sprinting = true;
         }
