@@ -8,18 +8,26 @@ public class James_MainMenu : MonoBehaviour {
 
 	public Button playButton;
 	public Button controlsButton;
+    public Button options;
 	public Button quitButton;
 	public Button creditsButton;
+    
 
 	// Use this for initialization
 	void Start () 
 	{
 		Button play = playButton.GetComponent<Button> ();
 		play.onClick.AddListener (PlayGame);
-		Button options = controlsButton.GetComponent<Button> ();
-		options.onClick.AddListener (Options);
+
+        Button controls = controlsButton.GetComponent<Button>();
+        controls.onClick.AddListener(Controls);
+
+        Button opt = options.GetComponent<Button> ();
+		opt.onClick.AddListener (Options);
+
 		Button quit = quitButton.GetComponent<Button> ();
 		quit.onClick.AddListener (QuitGame);
+
 		Button cred = creditsButton.GetComponent<Button> ();
 		cred.onClick.AddListener (CreditButton);
 	}
@@ -32,6 +40,13 @@ public class James_MainMenu : MonoBehaviour {
         Debug.Log("SELECT LEVEL");
         SceneManager.LoadScene("NewLevelSelect");
     }
+
+    public void Controls()
+    {
+        Debug.Log("CONTROLS");
+        SceneManager.LoadScene("Controls");
+    }
+
 	public void Options()
 	{
 		Debug.Log ("Options are shown");
