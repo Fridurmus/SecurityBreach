@@ -68,4 +68,10 @@ public class GameOverScript : MonoBehaviour
         Debug.Log("SELECT LEVEL");
         SceneManager.LoadScene("Level Select");
     }
+
+    public void Retry()
+    {
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
+    }
 }
