@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private Quaternion upDirection = Quaternion.Euler(90, 0, 0);
     private Quaternion downDirection = Quaternion.Euler(90, 180, 0);
     public Animator spriteAnimator;
+    public Animator ConsoleAnim;
     public bool GameOver = false;
 
 
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         originalY = transform.position.y;
         spriteAnimator = GetComponent<Animator>();
+        ConsoleAnim = GameObject.FindGameObjectWithTag("upload").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -159,6 +161,7 @@ public class PlayerController : MonoBehaviour
         if (other.tag == "upload" && Input.GetButtonDown("use"))
         {
             exitTrig.SetActive(true);
+            ConsoleAnim.SetBool("isTriggered", true);
         }
     }
 }
