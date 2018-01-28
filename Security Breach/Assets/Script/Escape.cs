@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class Escape : MonoBehaviour {
 
-
 	// Use this for initialization
 	void Start () 
 	{
@@ -23,7 +22,7 @@ public class Escape : MonoBehaviour {
 	{
 		if(other.tag == "Player")
 		{
-			SceneManager.LoadScene ("Main_menu");
+			SceneManager.LoadScene ("NewLevelSelect");
 		}
 	}
 
