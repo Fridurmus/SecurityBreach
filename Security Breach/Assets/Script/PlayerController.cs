@@ -14,10 +14,10 @@ public class PlayerController : MonoBehaviour {
 
     private Vector3 moveDirection = Vector3.zero;
     public CharacterController controller;
-    //private Quaternion rightDirection = Quaternion.Euler(0, 0, 90);
-    //private Quaternion leftDirection = Quaternion.Euler(0, 0, 270);
-    //private Quaternion upDirection = Quaternion.Euler(0, 0, 0);
-    //private Quaternion downDirection = Quaternion.Euler(0, 0, 180);
+    private Quaternion rightDirection = Quaternion.Euler(0, 0, 90);
+    private Quaternion leftDirection = Quaternion.Euler(0, 0, 270);
+    private Quaternion upDirection = Quaternion.Euler(0, 0, 0);
+    private Quaternion downDirection = Quaternion.Euler(0, 0, 180);
     public Animator spriteAnimator;
 
 
@@ -91,22 +91,22 @@ public class PlayerController : MonoBehaviour {
 
 
         //do rotation checks.
-        //if (Input.GetAxisRaw("Horizontal") > 0 && transform.rotation.eulerAngles.z != 90)
-        //{
-        //    transform.rotation = rightDirection;
-        //}
-        //if (Input.GetAxisRaw("Horizontal") < 0 && transform.rotation.eulerAngles.z != 270)
-        //{
-        //    transform.rotation = leftDirection;
-        //}
-        //if (Input.GetAxisRaw("Vertical") > 0 && transform.rotation.eulerAngles.z != 0)
-        //{
-        //    transform.rotation = upDirection;
-        //}
-        //if (Input.GetAxisRaw("Vertical") < 0 && transform.rotation.eulerAngles.z != 180)
-        //{
-        //    transform.rotation = downDirection;
-        //}
+        if (Input.GetAxisRaw("Horizontal") > 0 && transform.rotation.eulerAngles.z != 90)
+        {
+            transform.rotation = rightDirection;
+        }
+        if (Input.GetAxisRaw("Horizontal") < 0 && transform.rotation.eulerAngles.z != 270)
+        {
+            transform.rotation = leftDirection;
+        }
+        if (Input.GetAxisRaw("Vertical") > 0 && transform.rotation.eulerAngles.z != 0)
+        {
+            transform.rotation = upDirection;
+        }
+        if (Input.GetAxisRaw("Vertical") < 0 && transform.rotation.eulerAngles.z != 180)
+        {
+            transform.rotation = downDirection;
+        }
 
         //begin setting up non-movement input
         if (Input.GetButtonDown("use"))
