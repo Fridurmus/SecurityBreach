@@ -1,21 +1,21 @@
 fileFormatVersion: 2
 guid: 71045089eb060f340b3288dd369c6955
-timeCreated: 1517095088
+timeCreated: 1517106529
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: PATROL_SPRITESHEET_0
-    21300002: PATROL_SPRITESHEET_1
-    21300004: PATROL_SPRITESHEET_2
-    21300006: PATROL_SPRITESHEET_3
-    21300008: PATROL_SPRITESHEET_4
-    21300010: PATROL_SPRITESHEET_5
-    21300012: PATROL_SPRITESHEET_6
-    21300014: PATROL_SPRITESHEET_7
-    21300016: PATROL_SPRITESHEET_8
-    21300018: PATROL_SPRITESHEET_9
-    21300020: PATROL_SPRITESHEET_10
-    21300022: PATROL_SPRITESHEET_11
+    21300000: PATROL_IDLE
+    21300002: PATROL_ALERT_IDLE
+    21300004: PATROL_MOVE_1
+    21300006: PATROL_ALERT_FIRING_1
+    21300008: PATROL_MOVE_2
+    21300010: PATROL_ALERT_FIRING_2
+    21300012: PATROL_MOVE_3
+    21300014: PATROL_MOVE_4
+    21300016: PATROL_MOVE_5
+    21300018: PATROL_MOVE_6
+    21300020: PATROL_MOVE_7
+    21300022: PATROL_MOVE_8
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -112,7 +112,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PATROL_SPRITESHEET_0
+      name: PATROL_IDLE
       rect:
         serializedVersion: 2
         x: 0
@@ -120,13 +120,13 @@ TextureImporter:
         width: 32
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PATROL_SPRITESHEET_1
+      name: PATROL_ALERT_IDLE
       rect:
         serializedVersion: 2
         x: 0
@@ -134,13 +134,13 @@ TextureImporter:
         width: 32
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PATROL_SPRITESHEET_2
+      name: PATROL_MOVE_1
       rect:
         serializedVersion: 2
         x: 36
@@ -148,13 +148,13 @@ TextureImporter:
         width: 32
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PATROL_SPRITESHEET_3
+      name: PATROL_ALERT_FIRING_1
       rect:
         serializedVersion: 2
         x: 37
@@ -162,13 +162,13 @@ TextureImporter:
         width: 32
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PATROL_SPRITESHEET_4
+      name: PATROL_MOVE_2
       rect:
         serializedVersion: 2
         x: 73
@@ -176,13 +176,13 @@ TextureImporter:
         width: 32
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PATROL_SPRITESHEET_5
+      name: PATROL_ALERT_FIRING_2
       rect:
         serializedVersion: 2
         x: 74
@@ -190,13 +190,13 @@ TextureImporter:
         width: 32
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PATROL_SPRITESHEET_6
+      name: PATROL_MOVE_3
       rect:
         serializedVersion: 2
         x: 110
@@ -204,13 +204,13 @@ TextureImporter:
         width: 32
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PATROL_SPRITESHEET_7
+      name: PATROL_MOVE_4
       rect:
         serializedVersion: 2
         x: 147
@@ -218,13 +218,13 @@ TextureImporter:
         width: 32
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PATROL_SPRITESHEET_8
+      name: PATROL_MOVE_5
       rect:
         serializedVersion: 2
         x: 184
@@ -232,13 +232,13 @@ TextureImporter:
         width: 32
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PATROL_SPRITESHEET_9
+      name: PATROL_MOVE_6
       rect:
         serializedVersion: 2
         x: 223
@@ -246,13 +246,13 @@ TextureImporter:
         width: 32
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PATROL_SPRITESHEET_10
+      name: PATROL_MOVE_7
       rect:
         serializedVersion: 2
         x: 262
@@ -260,13 +260,13 @@ TextureImporter:
         width: 32
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PATROL_SPRITESHEET_11
+      name: PATROL_MOVE_8
       rect:
         serializedVersion: 2
         x: 300
@@ -274,7 +274,7 @@ TextureImporter:
         width: 32
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -1,29 +1,29 @@
 fileFormatVersion: 2
 guid: 41e11180bcb55e34e847a6a769c14109
-timeCreated: 1517092649
+timeCreated: 1517106263
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Updated_Char_Spreadsheet_0
-    21300002: Updated_Char_Spreadsheet_1
-    21300004: Updated_Char_Spreadsheet_2
-    21300006: Updated_Char_Spreadsheet_3
-    21300008: Updated_Char_Spreadsheet_4
-    21300010: Updated_Char_Spreadsheet_5
-    21300012: Updated_Char_Spreadsheet_6
-    21300014: Updated_Char_Spreadsheet_7
-    21300016: Updated_Char_Spreadsheet_8
-    21300018: Updated_Char_Spreadsheet_9
-    21300020: Updated_Char_Spreadsheet_10
-    21300022: Updated_Char_Spreadsheet_11
-    21300024: Updated_Char_Spreadsheet_12
-    21300026: Updated_Char_Spreadsheet_13
-    21300028: Updated_Char_Spreadsheet_14
-    21300030: Updated_Char_Spreadsheet_15
-    21300032: Updated_Char_Spreadsheet_16
-    21300034: Updated_Char_Spreadsheet_17
-    21300036: Updated_Char_Spreadsheet_18
-    21300038: Updated_Char_Spreadsheet_19
+    21300000: Dave_IDLE
+    21300002: Dave_MOVE_1
+    21300004: Dave_MOVE_2
+    21300006: Dave_MOVE_3
+    21300008: Dave_MOVE_4
+    21300010: Dave_MOVE_5
+    21300012: Dave_MOVE_6
+    21300014: Dave_MOVE_7
+    21300016: Dave_MOVE_8
+    21300018: Dave_INTERACT
+    21300020: Dave_CROUCH_IDLE
+    21300022: Dave_CROUCH_MOVE_1
+    21300024: Dave_CROUCH_MOVE_2
+    21300026: Dave_CROUCH_MOVE_3
+    21300028: Dave_CROUCH_MOVE_4
+    21300030: Dave_CROUCH_MOVE_5
+    21300032: Dave_CROUCH_MOVE_6
+    21300034: Dave_CROUCH_MOVE_7
+    21300036: Dave_CROUCH_MOVE_8
+    21300038: Dave_CROUCH_INTERACT
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -120,7 +120,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_0
+      name: Dave_IDLE
       rect:
         serializedVersion: 2
         x: 11
@@ -128,13 +128,13 @@ TextureImporter:
         width: 30
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_1
+      name: Dave_MOVE_1
       rect:
         serializedVersion: 2
         x: 50
@@ -142,13 +142,13 @@ TextureImporter:
         width: 30
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_2
+      name: Dave_MOVE_2
       rect:
         serializedVersion: 2
         x: 89
@@ -156,13 +156,13 @@ TextureImporter:
         width: 30
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_3
+      name: Dave_MOVE_3
       rect:
         serializedVersion: 2
         x: 129
@@ -170,13 +170,13 @@ TextureImporter:
         width: 30
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_4
+      name: Dave_MOVE_4
       rect:
         serializedVersion: 2
         x: 169
@@ -184,13 +184,13 @@ TextureImporter:
         width: 30
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_5
+      name: Dave_MOVE_5
       rect:
         serializedVersion: 2
         x: 210
@@ -198,13 +198,13 @@ TextureImporter:
         width: 30
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_6
+      name: Dave_MOVE_6
       rect:
         serializedVersion: 2
         x: 251
@@ -212,13 +212,13 @@ TextureImporter:
         width: 30
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_7
+      name: Dave_MOVE_7
       rect:
         serializedVersion: 2
         x: 291
@@ -226,13 +226,13 @@ TextureImporter:
         width: 30
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_8
+      name: Dave_MOVE_8
       rect:
         serializedVersion: 2
         x: 333
@@ -240,13 +240,13 @@ TextureImporter:
         width: 30
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_9
+      name: Dave_INTERACT
       rect:
         serializedVersion: 2
         x: 375
@@ -254,13 +254,13 @@ TextureImporter:
         width: 30
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_10
+      name: Dave_CROUCH_IDLE
       rect:
         serializedVersion: 2
         x: 11
@@ -268,13 +268,13 @@ TextureImporter:
         width: 30
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_11
+      name: Dave_CROUCH_MOVE_1
       rect:
         serializedVersion: 2
         x: 50
@@ -282,13 +282,13 @@ TextureImporter:
         width: 30
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_12
+      name: Dave_CROUCH_MOVE_2
       rect:
         serializedVersion: 2
         x: 89
@@ -296,13 +296,13 @@ TextureImporter:
         width: 30
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_13
+      name: Dave_CROUCH_MOVE_3
       rect:
         serializedVersion: 2
         x: 129
@@ -310,13 +310,13 @@ TextureImporter:
         width: 30
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_14
+      name: Dave_CROUCH_MOVE_4
       rect:
         serializedVersion: 2
         x: 169
@@ -324,13 +324,13 @@ TextureImporter:
         width: 30
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_15
+      name: Dave_CROUCH_MOVE_5
       rect:
         serializedVersion: 2
         x: 210
@@ -338,13 +338,13 @@ TextureImporter:
         width: 30
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_16
+      name: Dave_CROUCH_MOVE_6
       rect:
         serializedVersion: 2
         x: 251
@@ -352,13 +352,13 @@ TextureImporter:
         width: 30
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_17
+      name: Dave_CROUCH_MOVE_7
       rect:
         serializedVersion: 2
         x: 291
@@ -366,13 +366,13 @@ TextureImporter:
         width: 30
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_18
+      name: Dave_CROUCH_MOVE_8
       rect:
         serializedVersion: 2
         x: 333
@@ -380,13 +380,13 @@ TextureImporter:
         width: 30
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Updated_Char_Spreadsheet_19
+      name: Dave_CROUCH_INTERACT
       rect:
         serializedVersion: 2
         x: 376
@@ -394,7 +394,7 @@ TextureImporter:
         width: 30
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
