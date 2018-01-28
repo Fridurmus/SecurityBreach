@@ -9,7 +9,8 @@ public class James_MainMenu : MonoBehaviour {
 	public Button playButton;
 	public Button controlsButton;
 	public Button quitButton;
-	public Button backButton;
+	public Button creditsButton;
+	public Button levelButton;
 
 	// Use this for initialization
 	void Start () 
@@ -20,9 +21,10 @@ public class James_MainMenu : MonoBehaviour {
 		controls.onClick.AddListener (ShowControls);
 		Button quit = quitButton.GetComponent<Button> ();
 		quit.onClick.AddListener (QuitGame);
-		Button back = backButton.GetComponent<Button> ();
-		back.onClick.AddListener (BackButton);
-
+		Button cred = creditsButton.GetComponent<Button> ();
+		cred.onClick.AddListener (CreditButton);
+		Button level = levelButton.GetComponent<Button> ();
+		level.onClick.AddListener (LevelButton);
 	}
 	
 	// Update is called once per frame
@@ -42,10 +44,16 @@ public class James_MainMenu : MonoBehaviour {
 		Debug.Log ("Game has quit");
 		Application.Quit ();
 	}
-	public void BackButton()
+
+	public void LevelButton()
 	{
-		Debug.Log ("GO BACK");
-		SceneManager.LoadScene ("Main_menu");
+		Debug.Log ("SELECT LEVEL");
+		SceneManager.LoadScene ("Level Select");
+	}
+	public void CreditButton()
+	{
+		Debug.Log ("ROLE CREDITS");
+		SceneManager.LoadScene ("Credits");
 	}
 		
 }
