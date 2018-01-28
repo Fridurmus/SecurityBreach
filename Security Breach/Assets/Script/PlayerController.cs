@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
 
     public float speed = 6.0f;
     public bool sneaking = false;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour {
     private Quaternion upDirection = Quaternion.Euler(90, 0, 0);
     private Quaternion downDirection = Quaternion.Euler(90, 180, 0);
     public Animator spriteAnimator;
+    public bool GameOver = false;
 
 
 
@@ -26,125 +28,131 @@ public class PlayerController : MonoBehaviour {
     public GameObject hackBulletPrefab;
     public Transform hackBulletSpawn;
 
-    
+
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         controller = GetComponent<CharacterController>();
         originalY = transform.position.y;
         spriteAnimator = GetComponent<Animator>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        //check for sprinting
-        if (Input.GetButton("sprint") && Input.GetAxis("Horizontal") != 0 || Input.GetButton("sprint") && Input.GetAxis("Vertical") != 0)
-        {
-            sprinting = true;
-            spriteAnimator.SetBool("isSprinting", true);
-        }
+    }
 
-        else
+    // Update is called once per frame
+    void Update()
+    {
+        if (!GameOver)
         {
-            sprinting = false;
-            spriteAnimator.SetBool("isSprinting", false);
-        }
 
-        //check for sneaking
-        if (Input.GetButton("sneak"))
-        {
-            sneaking = true;
-            spriteAnimator.SetBool("isCrouching", true);
-        }
-        else
-        {
-            sneaking = false;
-            spriteAnimator.SetBool("isCrouching", false);
-        }
+            //check for sprinting
+            if (Input.GetButton("sprint") && Input.GetAxis("Horizontal") != 0 || Input.GetButton("sprint") && Input.GetAxis("Vertical") != 0)
+            {
+                sprinting = true;
+                spriteAnimator.SetBool("isSprinting", true);
+            }
 
-        //set the direction
-		if (sprinting && !sneaking)
-        {
-            speed = 8.0f;
-        }
-        else if (sneaking)
-        {
-            speed = 3.0f;
-        }
-        else
-        {
-            speed = 4.0f;
-        }
+            else
+            {
+                sprinting = false;
+                spriteAnimator.SetBool("isSprinting", false);
+            }
 
-        if ((Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Horizontal") < -0.1f) || (Input.GetAxis("Vertical") > 0.1f || Input.GetAxis("Vertical") < -0.1f))
-        {
-            spriteAnimator.SetBool("isMoving", true);
-        }
-        else
-        {
-            spriteAnimator.SetBool("isMoving", false);
-        }
-        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            //check for sneaking
+            if (Input.GetButton("sneak"))
+            {
+                sneaking = true;
+                spriteAnimator.SetBool("isCrouching", true);
+            }
+            else
+            {
+                sneaking = false;
+                spriteAnimator.SetBool("isCrouching", false);
+            }
 
-        //do the movement
-        controller.Move(moveDirection * speed * Time.deltaTime);
+            //set the direction
+            if (sprinting && !sneaking)
+            {
+                speed = 8.0f;
+            }
+            else if (sneaking)
+            {
+                speed = 3.0f;
+            }
+            else
+            {
+                speed = 4.0f;
+            }
+
+            if ((Input.GetAxis("Horizontal") > 0.1f || Input.GetAxis("Horizontal") < -0.1f) || (Input.GetAxis("Vertical") > 0.1f || Input.GetAxis("Vertical") < -0.1f))
+            {
+                spriteAnimator.SetBool("isMoving", true);
+            }
+            else
+            {
+                spriteAnimator.SetBool("isMoving", false);
+            }
+            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+
+            //do the movement
+            controller.Move(moveDirection * speed * Time.deltaTime);
 
 
-        //do rotation checks.
-        if (Input.GetAxisRaw("Horizontal") > 0 && transform.rotation.eulerAngles.z != 90)
-        {
-            transform.rotation = rightDirection;
-        }
-        if (Input.GetAxisRaw("Horizontal") < 0 && transform.rotation.eulerAngles.z != 270)
-        {
-            transform.rotation = leftDirection;
-        }
-        if (Input.GetAxisRaw("Vertical") > 0 && transform.rotation.eulerAngles.z != 360)
-        {
-            transform.rotation = upDirection;
-        }
-        if (Input.GetAxisRaw("Vertical") < 0 && transform.rotation.eulerAngles.z != 180)
-        {
-            transform.rotation = downDirection;
-        }
+            //do rotation checks.
+            if (Input.GetAxisRaw("Horizontal") > 0 && transform.rotation.eulerAngles.z != 90)
+            {
+                transform.rotation = rightDirection;
+            }
+            if (Input.GetAxisRaw("Horizontal") < 0 && transform.rotation.eulerAngles.z != 270)
+            {
+                transform.rotation = leftDirection;
+            }
+            if (Input.GetAxisRaw("Vertical") > 0 && transform.rotation.eulerAngles.z != 360)
+            {
+                transform.rotation = upDirection;
+            }
+            if (Input.GetAxisRaw("Vertical") < 0 && transform.rotation.eulerAngles.z != 180)
+            {
+                transform.rotation = downDirection;
+            }
 
-        //begin setting up non-movement input
-        if (Input.GetButtonDown("use"))
-        {
-            isInteracting = true;
-            spriteAnimator.SetTrigger("didInteract");
-        }
-        else
-        {
-            isInteracting = false;
-        }
+            //begin setting up non-movement input
+            if (Input.GetButtonDown("use"))
+            {
+                isInteracting = true;
+                spriteAnimator.SetTrigger("didInteract");
+            }
+            else
+            {
+                isInteracting = false;
+            }
 
-        //use timescale for pause
-        if (Input.GetButtonDown("pause"))
-        {
-            Time.timeScale = 0;
-            isPaused = true;
-            pauseScreen.SetActive(true);
-        }
-        if (isPaused == true && Input.GetButtonDown("pause"))
-        {
-            Time.timeScale = 1;
-        }
+            //use timescale for pause
+            if (Input.GetButtonDown("pause"))
+            {
+                Time.timeScale = 0;
+                isPaused = true;
+                pauseScreen.SetActive(true);
+            }
+            if (isPaused == true && Input.GetButtonDown("pause"))
+            {
+                Time.timeScale = 1;
+            }
 
-        if (transform.position.y != originalY)
-        {
-            transform.position = new Vector3(transform.position.x, originalY, transform.position.z);
+            if (transform.position.y != originalY)
+            {
+                transform.position = new Vector3(transform.position.x, originalY, transform.position.z);
+            }
+            //if (Input.GetButtonDown("shoot"))
+            //{
+            //    var hackBullet = (GameObject)Instantiate(
+            //    hackBulletPrefab,
+            //    hackBulletSpawn.position,
+            //    hackBulletSpawn.rotation
+            //);
+            //    hackBullet.GetComponent<Rigidbody>().velocity = hackBulletSpawn.transform.up * 6;
+
+            //}
         }
-        //if (Input.GetButtonDown("shoot"))
-        //{
-        //    var hackBullet = (GameObject)Instantiate(
-        //    hackBulletPrefab,
-        //    hackBulletSpawn.position,
-        //    hackBulletSpawn.rotation
-        //);
-        //    hackBullet.GetComponent<Rigidbody>().velocity = hackBulletSpawn.transform.up * 6;
-            
-        //}
     }
     private void OnTriggerEnter(Collider other)
     {

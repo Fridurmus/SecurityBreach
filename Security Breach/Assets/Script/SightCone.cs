@@ -34,6 +34,8 @@ public class SightCone : MonoBehaviour
     public MeshFilter viewMeshFilter;
     Mesh viewMesh;
     MeshRenderer[] viewRender;
+    GameOverScript gameOver;
+ 
 
     public AudioSource[] sounds;
 
@@ -55,6 +57,7 @@ public class SightCone : MonoBehaviour
         huntTimer = timeToStopLooking;
         StartCoroutine("FindTargetsWithDelay", .2f);
         sounds = GetComponentsInChildren<AudioSource>();
+        gameOver = GameObject.FindGameObjectWithTag("GameOverOBJ").GetComponent<GameOverScript>();
     }
 
     private void LateUpdate()
@@ -87,6 +90,8 @@ public class SightCone : MonoBehaviour
                 hunting = true;
                 sounds[0].PlayOneShot(sounds[0].clip);
                 sounds[1].Play();
+                Player.GameOver = true;
+                gameOver.gameOver();
             }
             else
             {
