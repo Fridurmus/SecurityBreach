@@ -296,7 +296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creditsBox: {fileID: 1805563608}
   scrollSpeed: 40
-  TimetoMenu: 36
+  TimetoMenu: 38
 --- !u!114 &810770362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,9 +590,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Credits: \r\n\nArtist:\r\n\rDylan Scheuring\r\n\r\nDesigner:\r\nJames Dickson\r\nJabari
+  m_Text: "Credits \r\n\nArtist:\r\n\rDylan Scheuring\r\n\r\nDesigner:\r\nJames Dickson\r\nJabari
     Philbert\r\n\r\nProducer:\r\n\rTaylor Brodowsky\r\n\r\nAudio:\r\n\rZoay Jackson\r\n\r\nDeveloper:\r\nSean
-    Davis\r\nLuis Rivera Polanco"
+    Davis\r\nLuis Rivera Polanco\n\nThanks for playing!"
 --- !u!222 &1805563610
 CanvasRenderer:
   m_ObjectHideFlags: 0
