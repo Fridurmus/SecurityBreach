@@ -5603,6 +5603,10 @@ Prefab:
       propertyPath: myNavmeshAgent
       value: 
       objectReference: {fileID: 1052646486}
+    - target: {fileID: 1804031682096674, guid: 5e587bac8ca00734ca804acfab6a9a40, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e587bac8ca00734ca804acfab6a9a40, type: 2}
   m_IsPrefabParent: 0
