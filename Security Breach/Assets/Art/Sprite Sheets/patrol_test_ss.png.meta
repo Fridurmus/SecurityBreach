@@ -1,21 +1,20 @@
 fileFormatVersion: 2
-guid: 71045089eb060f340b3288dd369c6955
-timeCreated: 1517120582
+guid: 9d8fa93ea4b026b4ca70af0a458bb373
+timeCreated: 1517122594
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: PATROL_IDLE
-    21300002: PATROL_ALERT_IDLE
-    21300004: PATROL_MOVE_1
-    21300006: PATROL_ALERT_FIRING_1
-    21300008: PATROL_MOVE_2
-    21300010: PATROL_ALERT_FIRING_2
-    21300012: PATROL_MOVE_3
-    21300014: PATROL_MOVE_4
-    21300016: PATROL_MOVE_5
-    21300018: PATROL_MOVE_6
-    21300020: PATROL_MOVE_7
-    21300022: PATROL_MOVE_8
+    21300000: patrol_test_ss_0
+    21300002: patrol_test_ss_1
+    21300004: patrol_test_ss_2
+    21300006: patrol_test_ss_3
+    21300008: patrol_test_ss_4
+    21300010: patrol_test_ss_5
+    21300012: patrol_test_ss_6
+    21300014: patrol_test_ss_7
+    21300016: patrol_test_ss_8
+    21300018: patrol_test_ss_9
+    21300020: patrol_test_ss_10
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,193 +87,159 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PATROL_IDLE
+      name: patrol_test_ss_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 34
-        width: 32
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: PATROL_ALERT_IDLE
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2
-        width: 32
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: PATROL_MOVE_1
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 33
-        width: 32
+        x: 19
+        y: 39
+        width: 30
         height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PATROL_ALERT_FIRING_1
+      name: patrol_test_ss_1
       rect:
         serializedVersion: 2
-        x: 37
-        y: 2
-        width: 32
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: PATROL_MOVE_2
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 32
-        width: 32
-        height: 24
-      alignment: 9
-      pivot: {x: 0.5762565, y: 0.49999985}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: PATROL_ALERT_FIRING_2
-      rect:
-        serializedVersion: 2
-        x: 74
-        y: 2
-        width: 32
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: PATROL_MOVE_3
-      rect:
-        serializedVersion: 2
-        x: 110
-        y: 33
-        width: 32
+        x: 55
+        y: 39
+        width: 30
         height: 21
-      alignment: 9
-      pivot: {x: 0.5, y: 0.36055905}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PATROL_MOVE_4
+      name: patrol_test_ss_2
       rect:
         serializedVersion: 2
-        x: 147
-        y: 31
-        width: 32
+        x: 92
+        y: 38
+        width: 30
         height: 23
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PATROL_MOVE_5
+      name: patrol_test_ss_3
       rect:
         serializedVersion: 2
-        x: 184
-        y: 26
-        width: 32
-        height: 28
+        x: 129
+        y: 39
+        width: 30
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PATROL_MOVE_6
+      name: patrol_test_ss_4
       rect:
         serializedVersion: 2
-        x: 223
-        y: 26
-        width: 32
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 166
+        y: 39
+        width: 30
+        height: 20
+      alignment: 9
+      pivot: {x: 0.50000054, y: 0.5350472}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PATROL_MOVE_7
+      name: patrol_test_ss_5
       rect:
         serializedVersion: 2
-        x: 262
-        y: 26
-        width: 32
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 203
+        y: 41
+        width: 30
+        height: 17
+      alignment: 9
+      pivot: {x: 0.50252074, y: 0.49839872}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PATROL_MOVE_8
+      name: patrol_test_ss_6
       rect:
         serializedVersion: 2
-        x: 300
-        y: 26
-        width: 32
-        height: 27
+        x: 242
+        y: 40
+        width: 30
+        height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patrol_test_ss_7
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 41
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patrol_test_ss_8
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 14
+        width: 30
+        height: 18
+      alignment: 9
+      pivot: {x: 0.49999973, y: 0.4705946}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patrol_test_ss_9
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 14
+        width: 30
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0.42060548}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: patrol_test_ss_10
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 14
+        width: 31
+        height: 18
+      alignment: 9
+      pivot: {x: 0.48292592, y: 0.4663938}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
