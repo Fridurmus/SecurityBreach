@@ -45,20 +45,6 @@ public class PlayerController : MonoBehaviour
     {
         if (!GameOver)
         {
-
-            //check for sprinting
-            if (Input.GetButton("sprint") && Input.GetAxis("Horizontal") != 0 || Input.GetButton("sprint") && Input.GetAxis("Vertical") != 0)
-            {
-                sprinting = true;
-                spriteAnimator.SetBool("isSprinting", true);
-            }
-
-            else
-            {
-                sprinting = false;
-                spriteAnimator.SetBool("isSprinting", false);
-            }
-
             //check for sneaking
             if (Input.GetButton("sneak"))
             {
@@ -69,6 +55,20 @@ public class PlayerController : MonoBehaviour
             {
                 sneaking = false;
                 spriteAnimator.SetBool("isCrouching", false);
+            }
+
+
+            //check for sprinting
+            if (Input.GetButton("sprint") && Input.GetAxis("Horizontal") != 0 && !sneaking || Input.GetButton("sprint") && Input.GetAxis("Vertical") != 0 && !sneaking)
+            {
+                sprinting = true;
+                spriteAnimator.SetBool("isSprinting", true);
+            }
+
+            else
+            {
+                sprinting = false;
+                spriteAnimator.SetBool("isSprinting", false);
             }
 
             //set the direction
