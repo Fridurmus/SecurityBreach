@@ -17,8 +17,8 @@ public class James_MainMenu : MonoBehaviour {
 	{
 		Button play = playButton.GetComponent<Button> ();
 		play.onClick.AddListener (PlayGame);
-		Button controls = controlsButton.GetComponent<Button> ();
-		controls.onClick.AddListener (ShowControls);
+		Button options = controlsButton.GetComponent<Button> ();
+		options.onClick.AddListener (Options);
 		Button quit = quitButton.GetComponent<Button> ();
 		quit.onClick.AddListener (QuitGame);
 		Button cred = creditsButton.GetComponent<Button> ();
@@ -34,7 +34,7 @@ public class James_MainMenu : MonoBehaviour {
 	{
 		SceneManager.LoadScene ("level 1");
 	}
-	public void ShowControls()
+	public void Options()
 	{
 		Debug.Log ("Options are shown");
 		SceneManager.LoadScene ("Options_Menu");

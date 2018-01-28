@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class FullscreenToggle : MonoBehaviour {
 
     public Toggle fsToggle;
+    public AudioSource audioSource;
     // Use this for initialization
     void Start() {
         fsToggle.onValueChanged.AddListener(delegate { fullScreenToggle(); });
@@ -26,5 +28,6 @@ public class FullscreenToggle : MonoBehaviour {
         {
             Screen.fullScreen = true;
         }
+        audioSource.PlayOneShot(audioSource.clip);
     }
 }

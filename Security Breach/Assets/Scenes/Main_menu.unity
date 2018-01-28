@@ -527,7 +527,6 @@ GameObject:
   - component: {fileID: 973855580}
   - component: {fileID: 973855579}
   - component: {fileID: 973855582}
-  - component: {fileID: 973855583}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -651,19 +650,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1464718784}
---- !u!114 &973855583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 973855577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d532db448294c2c42961eaf39e0bf417, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickedButton: {fileID: 973855579}
-  audioSource: {fileID: 1064031127}
 --- !u!1 &989157411
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,7 +845,6 @@ GameObject:
   - component: {fileID: 1151851626}
   - component: {fileID: 1151851625}
   - component: {fileID: 1151851628}
-  - component: {fileID: 1151851629}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -983,19 +968,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1464718784}
---- !u!114 &1151851629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1151851623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d532db448294c2c42961eaf39e0bf417, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickedButton: {fileID: 1151851625}
-  audioSource: {fileID: 1064031127}
 --- !u!1 &1186341593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,7 +1092,6 @@ GameObject:
   - component: {fileID: 1210425532}
   - component: {fileID: 1210425531}
   - component: {fileID: 1210425534}
-  - component: {fileID: 1210425535}
   m_Layer: 5
   m_Name: Level Select
   m_TagString: Untagged
@@ -1244,19 +1215,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1464718784}
---- !u!114 &1210425535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1210425529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d532db448294c2c42961eaf39e0bf417, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickedButton: {fileID: 1210425531}
-  audioSource: {fileID: 1064031127}
 --- !u!1 &1213049876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,7 +1428,6 @@ GameObject:
   - component: {fileID: 1386308198}
   - component: {fileID: 1386308197}
   - component: {fileID: 1386308200}
-  - component: {fileID: 1386308201}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -1583,19 +1540,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1464718784}
---- !u!114 &1386308201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1386308195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d532db448294c2c42961eaf39e0bf417, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickedButton: {fileID: 1386308197}
-  audioSource: {fileID: 383066603}
 --- !u!1 &1464718783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,7 +1735,6 @@ GameObject:
   - component: {fileID: 1777738998}
   - component: {fileID: 1777738997}
   - component: {fileID: 1777739000}
-  - component: {fileID: 1777739001}
   m_Layer: 5
   m_Name: Options Button
   m_TagString: Untagged
@@ -1904,19 +1847,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1464718784}
---- !u!114 &1777739001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1777738995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d532db448294c2c42961eaf39e0bf417, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickedButton: {fileID: 1777738997}
-  audioSource: {fileID: 1064031127}
 --- !u!1 &2006479826
 GameObject:
   m_ObjectHideFlags: 0
